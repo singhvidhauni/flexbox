@@ -1,0 +1,94 @@
+.container {
+    max-width: 120rem;
+    min-height: 50rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    @media only screen and (max-width: $bp-largest){
+        margin:0;
+        max-width: 100;
+        width: 100%;
+    }
+    @media only screen and (max-width: $bp-large) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+.header {
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: var(--color-white);
+    border-bottom: var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        height: 10rem;
+        align-content: space-around;
+    }
+}
+.content {
+    display: flex;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;//flex 1 2 3  1-means flex-grow value 0 means it will not grow beyond the given width, flex-2 means shrink
+                  //the width will not shrink even if the contents are less so 0 is ok and last is the flex-basis or width which is 18%
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hotel-view {
+    background-color: var(--color-white);
+    flex: 1;// here the sidebar will occupy 18% of width and remaining is 82% so it will occupy as much as is available
+    //test
+}
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+       padding:3rem;
+    }
+}
+.description {
+    font-size: 1.4rem;
+    background-color: var(--color-white);
+    padding:3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    box-shadow: var(--shadow-light);
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.75rem;
+    }
+}
+.user-reviews {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.75rem;
+        margin-right: 1.6rem;
+    }
+}
+
